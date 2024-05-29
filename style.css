@@ -1,29 +1,34 @@
 body {
     background: linear-gradient(150deg, rgb(151, 181, 220) 40%, rgb(160, 76, 205) 100%);
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 #heading {
     text-align: center;
+    margin-top: 20px;
 }
 
 .registration-form {
-    background-color: rgb(255 255 255 / 50%);
-    margin: 50px 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 50px auto;
     padding: 25px;
     backdrop-filter: blur(5px);
     border-radius: 15px;
+    max-width: 600px;
 }
 
 .names, .contacts, .passwords {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .form-group {
-    display: inline-block;
-    width: 45%;
+    width: 48%;
+    margin-bottom: 15px;
 }
 
 label {
@@ -37,7 +42,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     border: 2px solid grey;
     border-top: 1px solid grey;
     box-sizing: border-box;
-    margin-bottom: 10px;
     border-radius: 5px;
     outline: none;
 }
@@ -45,20 +49,20 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 .gender {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
+
 .gender input {
     margin-left: 10px;
 }
 
 .gender label {
-    margin: 0px;
+    margin: 0;
     margin-right: 25px;
-
 }
 
 button {
     width: 100%;
-    margin: 20px auto;
     padding: 10px 20px;
     background: linear-gradient(150deg, rgb(151, 181, 220) 40%, rgb(160, 76, 205) 100%);
     color: rgb(0, 0, 0);
@@ -69,10 +73,15 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(150deg, rgb(183, 146, 203) 40%,  rgb(161, 196, 241)100%);
+    background: linear-gradient(150deg, rgb(183, 146, 203) 40%, rgb(161, 196, 241) 100%);
 }
 
 @media (max-width: 650px) {
+    .registration-form {
+        margin: 20px;
+        padding: 15px;
+    }
+
     .names, .contacts, .passwords {
         flex-direction: column;
         margin-bottom: 5px;
@@ -80,16 +89,21 @@ button:hover {
 
     .form-group {
         width: 100%;
+        margin-bottom: 10px;
     }
+
     .gender {
-        display: flex;
-        margin: 0px;
-        margin-bottom: 15px;
         justify-content: space-between;
+        margin-bottom: 15px;
     }
+
     .gender label {
-        margin: 0px;
+        margin: 0;
+        flex: 1;
+    }
+
+    .gender input {
+        flex: none;
+        margin-left: 5px;
     }
 }
-
-

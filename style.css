@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(150deg, rgb(151, 181, 220) 40%, rgb(160, 76, 205) 100%);
+    font-family: sans-serif;
+}
+
+#heading {
+    text-align: center;
+}
+
+.registration-form {
+    background-color: rgb(255 255 255 / 50%);
+    margin: 50px 100px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+
+.names, .contacts, .passwords {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: inline-block;
+    width: 45%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid grey;
+    border-top: 1px solid grey;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+}
+.gender input {
+    margin-left: 10px;
+}
+
+.gender label {
+    margin: 0px;
+    margin-right: 25px;
+
+}
+
+button {
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: linear-gradient(150deg, rgb(151, 181, 220) 40%, rgb(160, 76, 205) 100%);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(150deg, rgb(183, 146, 203) 40%,  rgb(161, 196, 241)100%);
+}
+
+@media (max-width: 650px) {
+    .names, .contacts, .passwords {
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+    .gender {
+        display: flex;
+        margin: 0px;
+        margin-bottom: 15px;
+        justify-content: space-between;
+    }
+    .gender label {
+        margin: 0px;
+    }
+}
+
+
